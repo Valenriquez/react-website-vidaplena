@@ -1,0 +1,49 @@
+.box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 200px;
+  }
+  
+  .info-box {
+    text-align: center;
+  }
+
+  .App {
+    text-align: center;
+  }
+  
+  .section1 {
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+   }
+  
+  .section2 {
+    background-color: aquamarine;
+    background-size: cover;
+   }
+  
+  .section3 {
+    background-color: aquamarine;
+    background-size: cover;
+   }
+  
+   .container-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+  }
+  
+  .container-box {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    color: rgb(10, 10, 10);
+    background-color: rgba(186, 186, 157, 0.634);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
