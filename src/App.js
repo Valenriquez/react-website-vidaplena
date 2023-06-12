@@ -8,7 +8,11 @@ import Registrate from './pages/registrate/Registrate';
 import MiPerfil from './pages/MiPerfil/MiPerfil';
 import Signup from './pages/signup/Signup';
 import Login from './pages/login/Login';
-import Areas from './pages/areas/Areas';
+import AreaCognitiva from './pages/areas/AreaCognitiva';
+import AreaAfectiva from './pages/areas/AreaAfectiva';
+import AreaFisica from './pages/areas/AreaFisica';
+import AreaFuncional from './pages/areas/AreaFuncional';
+import AreaSocial from './pages/areas/AreaSocial';
 
 /*  <Route path="/pams" element={<PersonasAdultasMayores />} />   
  <Route path="/pams/add" element={<ManagePam />} />
@@ -25,7 +29,11 @@ function App() {
                     <Route path="/miPerfil" element={<MiPerfil />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/signup' element={<Signup />} />
-                    <Route path='/areas' element={<Areas />} />
+                    <Route path='/areacognitiva' element={<AreaCognitiva />} />
+                    <Route path='/areafuncional' element={<AreaFuncional />} />
+                    <Route path='/areaafectiva' element={<AreaAfectiva />} />
+                    <Route path='/areasocial' element={<AreaSocial />} />
+                    <Route path='/areafisica' element={<AreaFisica />} />
                 </Routes>
                 <BottomNavigationBar />
             </BrowserRouter>
