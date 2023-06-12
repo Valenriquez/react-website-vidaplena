@@ -30,7 +30,7 @@ const NavigationBar = () => {
             </Nav.Link>
           </OverlayTrigger>
           <Dropdown>
-            <Dropdown.Toggle className="NavLink" id="areas-dropdown">
+            <Dropdown.Toggle className="NavLink" id="areas-dropdown" style={{ color: 'black', backgroundColor: 'rgb(235, 217, 189)', borderColor: 'rgb(235, 217, 189)'}}>
               Áreas
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -40,6 +40,53 @@ const NavigationBar = () => {
               >
                 <Dropdown.Item as={Link} to="/areafuncional">
                   Funcional
+                </Dropdown.Item>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip id="tooltip-area2">Segunda Área</Tooltip>}
+              >
+                <Dropdown.Item as={Link} to="/areasocial">
+                  Social
+                </Dropdown.Item>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip id="tooltip-area3">Tercera Área</Tooltip>}
+              >
+                <Dropdown.Item as={Link} to="/areacognitiva">
+                  Cognitiva
+                </Dropdown.Item>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip id="tooltip-area4">Cuarta Área</Tooltip>}
+              >
+                <Dropdown.Item as={Link} to="/areafisica">
+                  Física
+                </Dropdown.Item>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip id="tooltip-area4">Quinta Área</Tooltip>}
+              >
+                <Dropdown.Item as={Link} to="/areaafectiva">
+                  Afectiva
+                </Dropdown.Item>
+              </OverlayTrigger>
+            </Dropdown.Menu>
+          </Dropdown>
+          <Dropdown>
+            <Dropdown.Toggle className="NavLink" id="areas-dropdown" style={{ color: 'black', backgroundColor: 'rgb(235, 217, 189)', borderColor: 'rgb(235, 217, 189)'}}>
+              Mi Perfil
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip id="tooltip-area1">Primera Área</Tooltip>}
+              >
+                <Dropdown.Item as={Link} to="/areafuncional">
+                  Resultado de Pruebas
                 </Dropdown.Item>
               </OverlayTrigger>
               <OverlayTrigger

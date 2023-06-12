@@ -13,6 +13,8 @@ import AreaAfectiva from './pages/areas/AreaAfectiva';
 import AreaFisica from './pages/areas/AreaFisica';
 import AreaFuncional from './pages/areas/AreaFuncional';
 import AreaSocial from './pages/areas/AreaSocial';
+import MMSE from './pruebas/MMSE';
+import Administrador from './pages/admin/Administrador';
 
 /*  <Route path="/pams" element={<PersonasAdultasMayores />} />   
  <Route path="/pams/add" element={<ManagePam />} />
@@ -34,6 +36,8 @@ function App() {
                     <Route path='/areaafectiva' element={<AreaAfectiva />} />
                     <Route path='/areasocial' element={<AreaSocial />} />
                     <Route path='/areafisica' element={<AreaFisica />} />
+                    <Route path='/pruebaMMSE' element={<MMSE />} />
+                    <Route path='/admin' element={<Administrador />} />
                 </Routes>
                 <BottomNavigationBar />
             </BrowserRouter>

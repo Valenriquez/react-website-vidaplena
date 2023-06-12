@@ -38,7 +38,7 @@ const AreaFisica = () => {
             </div>
 
             <div className="right">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F002%2F509%2F092%2Flarge_2x%2Falzheimers-disease-neurological-brain-cognition-line-style-icon-free-vector.jpg&f=1&nofb=1&ipt=1bf05c31bba48db90c1dd7b35d4b74dc70cb034a8ba1cd9b288a4383b068c9bf&ipo=images" alt="Imagen Cognición"></img>
+                <img src="https://banner2.cleanpng.com/20180525/bja/kisspng-keiko-aikawa-hot-yoga-meditation-body-yoga-man-5b08d8413368c1.6145502715273063052106.jpg" alt="Imagen Cognición"></img>
             </div>
             
         </div>

@@ -16,7 +16,6 @@ input {
     margin-bottom: 15px;
 }
  
-
 .login__container{
     width: 100%;
     min-height: 35vh;
@@ -32,7 +31,6 @@ input {
     background-color: rgb(235, 217, 189);
     border-radius: 6%;
 }
-
 
 .verify,
 .dashboard {
@@ -50,22 +48,15 @@ input {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
 }
 
- 
- 
 .codeBtn {
     background-color: green;
     color: #fff;
     margin-bottom: 15px;
 }
 
-.signOutBtn {
-    background-color: #c21010;
-    color: #fff;
-}
-
+ 
 .link {
     cursor: pointer;
     color: rgb(39, 147, 39);
@@ -79,6 +70,8 @@ input {
 .verify__form {
     align-items: center;
 }
+
+ 
 
 @media screen and (max-width: 800px) {
     .login__container,

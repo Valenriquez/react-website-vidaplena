@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './AbuelitosABP.css'
 //import image from './img/prueba1imagen.jpg';
 import Button from 'react-bootstrap/Button';
-
+ import { useNavigate } from "react-router-dom";
 
 function InfoBox() {
     const data = [
@@ -25,6 +25,9 @@ function InfoBox() {
 }
   
 function Intro() {
+  const navigate = useNavigate();
+  const goToSignUp = () => navigate("/signup");
+  const goToLogIn = () => navigate("/login");
   return(
   <> 
     <div style={{ width: '100%', height: '600px', padding: '50px', textAlign: 'left', '@media (min-width: 768px)': { width: '50%' } }}>
@@ -37,9 +40,9 @@ function Intro() {
       </p>
       <p style={{color: 'black'}}>Si deseas continuar, oprime el botón de abajo para registrarte.</p>
       
-      <Button variant="light" className="rounded-pill">Registro</Button>
+      <Button variant="primary" className="rounded-pill" onClick={goToSignUp}>Registro</Button>
       <span style={{ margin: '0 15px' }}></span> 
-      <Button variant="light" className="rounded-pill">Acceder a mi cuenta</Button>{' '}
+      <Button variant="primary" className="rounded-pill" onClick={goToLogIn}>Acceder a mi cuenta</Button>{' '}
     </div>
   </>
   );
@@ -87,32 +90,112 @@ function Slides(){
 }
 
 const AbuelitosABP = () => {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");  
+  const handleSubmit = (event) => {
+      event.preventDefault();
+    
+      // Send the form data to the backend.
+    
+      // Clear the form fields.
+      setName("");
+      setLastName("");
+      setEmail("");
+      setMessage("");
+  }
     return (
       <>  
         <div className="App">
         <section className="section1">
          <Intro />
-      </section>
+        </section> 
+        <h2 style={{ textAlign: "left" }}>CONTÁCTANOS</h2>
+        <div className="paraContactar">
+
+            <div className="left">
+                <p style={{ textAlign: "left" }}>
+                    <strong>E-mail:</strong> abuelitosabp@gmail.com
+                </p>
+                <p style={{ textAlign: "left" }}>
+                    <strong>Teléfono:</strong> +52 811659 6021
+                </p>
+                <p style={{ textAlign: "left" }}> Monterrey, Nuevo León, México</p>
         
-        <section className="testimonios">
-        <h2>TESTIMONIOS</h2>
-          <InfoBox />
-          
-          <div className="container">
-          <p>Aquí puedes agregar tu contenido para la segunda sección.</p>
-          </div>
-        </section>
-  
-        <section className="contacto"  style={{ textAlign: 'left',  padding: '50px', }}>
-          <h2>CONTÁCTANOS</h2>
-          <br />
-            <p><strong>E-mail:</strong> abuelitosabp@gmail.com</p>
-            <p><strong>Teléfono:</strong> +52 811659 6021</p>
-            <p> Monterrey, Nuevo León, México</p>
-             
-         </section>
-      </div>
-      </>
-    );
-};
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            </div>
+
+            <div className="center">
+                <form onSubmit={handleSubmit}>
+                <div>
+                    <div>
+                        <p>Introduce tu nombre: (obligatorio)</p>
+                        <input
+                            type="text"
+                            placeholder="Tu Nombre"
+                            value={name}
+                            onChange={(event) => setName(event.target.value)}
+                        />
+                    </div>
+
+                    <div>
+                        <p>Introduce tu apellido: (obligatorio)</p>
+                        <input
+                            type="text"
+                            placeholder="Tu Apellido"
+                            value={lastName}
+                            onChange={(event) => setLastName(event.target.value)}
+                        />
+                    </div>
+
+                    <div>
+                    <p>Introduce tu correo: (obligatorio)</p>
+                    <input
+                        type="email"
+                        placeholder="Tu Correo"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                    />
+                    </div>
+                </div>
+                </form>
+            </div>
+
+            <div className="right">
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <p>Escribe tu comentario:</p>
+                        <textarea
+                            placeholder="Tu Mensaje"
+                            value={message}
+                            onChange={(event) => setMessage(event.target.value)}
+                        />
+                        <p style={{margin: 0}}></p>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div className="right">
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <p>Escribe tu comentario:</p>
+                    <textarea
+                        placeholder="Tu Mensaje"
+                        value={message}
+                        onChange={(event) => setMessage(event.target.value)}
+                    />
+                    <p style={{margin: 0}}></p>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        </div>
+
+    </div>
+    </>
+  );
+}
 export default AbuelitosABP;

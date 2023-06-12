@@ -47,6 +47,10 @@ h3{
     align-items: center;
 }
 
+.BotonLogin{
+    
+}
+
 @media screen and (max-width: 800px) {
     .login__container,
     .signup__container,

@@ -22,6 +22,9 @@ const AreaCognitiva = () => {
         setMessage("");
 };
 
+const navigate = useNavigate();
+const gotoPruebas = () => navigate("/pruebaMMSE");
+
   return(
     <div>
 
@@ -48,7 +51,7 @@ const AreaCognitiva = () => {
         <h1 style={{ fontSize: "35px"}}>Pruebas</h1>
         <div className="pruebas">
             <div className="left">
-              <button> 
+              <button onClick={gotoPruebas}> 
                 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fcerebro-en-un-fondo-blanco-silueta-linear-de-los-dos-hemisferios-ilustraci-n-del-vector-148513433.jpg&f=1&nofb=1&ipt=7daad160be1f39fed947faacc534537e92d955409158d5e50459e7e0f932e481&ipo=images" alt="Imagen MMSE"></img>
                 <h2>MMSE</h2>
                 <p style={{ margin: 0 }}>Prueba bla bla bla</p>
@@ -56,7 +59,7 @@ const AreaCognitiva = () => {
             </div>
 
             <div className="right">
-              <button> 
+              <button onClick={gotoPruebas}> 
                 <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftusimagenesde.com%2Fwp-content%2Fuploads%2F2017%2F02%2Freloj-1.jpg&f=1&nofb=1&ipt=58d26cf117bb2f4d654675ddcbe88b29f9780efce525ddd190f018534777e3bb&ipo=images" alt="Imagen Reloj"></img>
                 <h2>Reloj</h2>
                 <p style={{ margin: 0 }}>Prueba bla bla bla</p>
@@ -144,7 +147,7 @@ const AreaCognitiva = () => {
                         onChange={(event) => setMessage(event.target.value)}
                     />
                     <p style={{margin: 0}}></p>
-                    <button type="submit">Enviar</button>
+                    <button type="submit" onClick={gotoPruebas}>Enviar</button>
                 </div>
             </form>
             <br></br><br></br><br></br><br></br><br></br><br></br><br></br>

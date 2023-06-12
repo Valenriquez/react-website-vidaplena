@@ -5,6 +5,7 @@ const Administrador = () => {
  
 
   return(
-
+    <h1>Soy un Admin!</h1>
   )
 };
+export default Administrador;

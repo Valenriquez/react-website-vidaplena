@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import './Login.css';
 import Button from 'react-bootstrap/Button';
+ 
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -16,17 +17,18 @@ const Login = () => {
     };
 
     const gotoSignUpPage = () => navigate("/signup");
+    const gotoAdmin = () => navigate("/admin");
 
     return (
         <> 
         <h1>Iniciar Sesión </h1>
         <div className="container"> 
-        <div className='login__container'>
+            <div className='login__container'>
             <form className='login__form' onSubmit={handleSubmit}>
                  
-                <label htmlFor='email'>Correo electrónico</label>
+                <label htmlFor='email' className="emailClass">Correo electrónico</label>
                 <input
-                    type='text'
+                    type='text' style={{backgroundColor: "white"}}
                     id='email'
                     name='email'
                     value={email}
@@ -49,6 +51,9 @@ const Login = () => {
                     ¿No tiene cuenta?{" "}
                     <span className='link' onClick={gotoSignUpPage}>
                         Regístrate
+                    </span> <br/>
+                    <span className='link' onClick={gotoAdmin}>
+                        Soy un Administrador(a)
                     </span>
                 </p>
             </form>
@@ -57,5 +62,4 @@ const Login = () => {
     </>
     );
 };
-
 export default Login;
