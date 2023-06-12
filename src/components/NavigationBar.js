@@ -125,10 +125,10 @@ const NavigationBar = () => {
           </Dropdown>
           <OverlayTrigger
             placement="bottom"
-            overlay={<Tooltip id="tooltip-perfil">Tooltip for Mi Perfil</Tooltip>}
+            overlay={<Tooltip id="tooltip-perfil">¿Eres un Administrador?</Tooltip>}
           >
-            <Nav.Link className="NavLink" as={Link} to="/acerca" style={{ color: 'black' }}>
-              Mi Perfil
+            <Nav.Link className="NavLink" as={Link} to="/admin" style={{ color: 'black' }}>
+              Administrador
             </Nav.Link>
           </OverlayTrigger>
         </Nav>
